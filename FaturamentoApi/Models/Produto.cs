@@ -1,10 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 namespace FaturamentoApi.Models
 {
-    public partial class Produto
+    public class Produto
     {
         [Key]
-        public int Id { get; set; }
+        public int ProdutoId { get; set; }
 
         [Required]
         [StringLength(100)]

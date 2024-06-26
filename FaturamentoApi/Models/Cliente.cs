@@ -1,15 +1,15 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace FaturamentoAPI.Models
+namespace FaturamentoApi.Models
 {
-	public class Customer
+	public class Cliente
 	{
 		[Key]
 		public int Id { get; set; }
 
 		[Required]
 		[StringLength(100)]
-		public string Name { get; set; }
+		public string Nome { get; set; }
 
 		[Required]
 		[EmailAddress]
@@ -18,6 +18,10 @@ namespace FaturamentoAPI.Models
 
 		[Required]
 		[StringLength(200)]
-		public string Address { get; set; }
+		public string Endereco { get; set; }
+
+		public int ProdutoId { get; set; }
+
+		public ICollection<Produto>? Produtos { get; set; }
 	}
 }
